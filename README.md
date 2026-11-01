@@ -14,3 +14,8 @@ A small todo app built two ways from the same project: a React/JSX frontend (the
 
 ## Project layout
 
+The app has two parallel frontends built from the same project root, sharing a single `src/` tree:
+
+- **React (primary)** — JSX under `src/`, built and served by Vite. Entry: `src/main.jsx` → `src/App.jsx`.
+- **Yew / Rust** — Rust under `src/`, compiled to WebAssembly. Entry: `src/main.rs` → `src/App.rs`.
+
