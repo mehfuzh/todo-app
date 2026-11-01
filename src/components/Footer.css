@@ -1,0 +1,41 @@
+/* Footer.css — list footer (count summary)
+   Matches the structure in src/components/Footer.jsx:
+     <footer class="app-footer">
+       <span class="footer-text">N of M shown</span>
+     </footer>
+*/
+
+.app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ---------- Footer stat pills (used by the Rust build footer) ---------- */
+.footer-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-pill {
+  padding: 5px 12px;
+  background: var(--surface-2);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.stat-pill.subtle {
+  color: var(--text-muted);
+}

@@ -1,0 +1,19 @@
+/* github-link-input.css — styles for the GitHub link composer */
+
+.github-link-input {
+    margin-bottom: 20px;
+}
+
+.github-link-input .input-wrapper {
+    flex: 1;
+}
+
+.github-link-input .composer-row {
+    align-items: stretch;
+}
+
+.github-link-error {
+    margin: 8px 2px 0;
+    font-size: 13px;
+    color: var(--danger);
+}

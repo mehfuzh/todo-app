@@ -1,0 +1,18 @@
+/* Welcome.css — first-run empty state shown when no tasks exist
+   Matches the structure in src/components/Welcome.jsx:
+     <div class="welcome-screen">
+       <p class="welcome-text">...</p>
+     </div>
+*/
+
+.welcome-screen {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted, #6b7280);
+}
+
+.welcome-text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted, #6b7280);
+}

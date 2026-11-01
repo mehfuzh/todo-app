@@ -1,0 +1,112 @@
+/* Composer.css — task composer (input + priority + due date + add button)
+   Matches the structure in src/components/Composer.jsx:
+     <section class="composer">
+       <input class="composer-input"/>
+       <div class="composer-options">
+         <div class="priority-group"> <button class="priority-chip"/> </div>
+         <input class="date-input"/>
+         <button class="btn btn-primary"/>
+       </div>
+       <p class="composer-notice"/>
+     </section>
+*/
+
+.composer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.composer-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 15px;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.composer-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.composer-input::placeholder {
+  color: var(--text-subtle);
+}
+
+.composer-options {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Priority chips ---------- */
+.priority-group {
+  display: flex;
+  gap: 6px;
+}
+
+.priority-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.priority-chip:hover {
+  border-color: var(--accent);
+}
+
+.priority-chip.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+.priority-chip .priority-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.priority-chip.priority-high .priority-dot { background: var(--danger); }
+.priority-chip.priority-medium .priority-dot { background: var(--warning); }
+.priority-chip.priority-low .priority-dot { background: var(--success); }
+
+/* ---------- Due date ---------- */
+.date-input {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  color-scheme: light dark;
+  transition: border-color 0.2s var(--ease);
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* ---------- Inline fetch notice ---------- */
+.composer-notice {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
